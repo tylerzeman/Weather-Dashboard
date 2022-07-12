@@ -113,7 +113,7 @@ function getResult(){
             }
             for (var i=1;i<6;i++){
 
-                var blueContainer = $("<div>")
+                var redContainer = $("<div>")
                 this["futureDate"+i] = $("<h>")
                 this["futureIcon"+i] = $("<img>")
                 this["futureTemp"+i] = $("<div>")
@@ -130,15 +130,14 @@ function getResult(){
                 DateimgSrc = "https://openweathermap.org/img/wn/" + (this["weatherIcon"+i]) + ".png";  
                 (this["futureIcon"+i]).attr('src',DateimgSrc)
 
-                $(".five-day").append(blueContainer)
-                blueContainer.append((this["futureDate"+i]));
-                blueContainer.append((this["futureIcon"+i]));
-                blueContainer.append((this["futureTemp"+i]));
-                blueContainer.append((this["futureWind"+i]));
-                blueContainer.append((this["futureHumidity"+i]));
-                blueContainer.addClass("weather-card")
+                $(".five-day").append(redContainer)
+                redContainer.append((this["futureDate"+i]));
+                redContainer.append((this["futureIcon"+i]));
+                redContainer.append((this["futureTemp"+i]));
+                redContainer.append((this["futureWind"+i]));
+                redContainer.append((this["futureHumidity"+i]));
+                redContainer.addClass("weather-card")
             }
-
           })
     })
 }
@@ -153,3 +152,28 @@ function getInfo() {
     }
     return freshList;
 }
+
+function addInfo (n) {
+    var addedList = getInfo();
+
+    if (historyList.includes(inputCity) === false){
+        addedList.push(n);
+    }
+   
+    localStorage.setItem("city", JSON.stringify(addedList));
+};
+//render history
+function renderInfo () {
+    var historyList = getInfo();
+    for (var i = 0; i < historyList.length; i++) {
+        var inputCity = historyList[i];
+        var searchCity =$("<div>") 
+        searchCity.attr('id',inputCity) 
+        searchCity.text(inputCity) 
+        searchCity.addClass("h4")
+
+        $(".history").append(searchCity)
+    }
+};
+
+renderInfo();
