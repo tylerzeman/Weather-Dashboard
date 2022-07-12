@@ -3,28 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="Assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
-
-<body>
-    <main>
-        <h1>Search for a city!</h1>
-        <form>
-            <input type="text" placeholder="San Diego">
-            <button id="search">Search</button>
-        </form>
-        <div>
-            <h2>Recent Searches</h2>
+<body class="flex-colomn min-100-vh">
+    <header class="hero">
+        <h1 class="app-title">Weather Dashboard</h1>
+    </header>
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-sm-12 col-md-4 float-left">
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search for a city</h3>
+                <div id="user-form" class="card-body">
+                    <input type="text" id="myInput" placeholder="Enter City" />
+                    <button class="btn" id="searchBtn">Search</button>
+                </div>
+            </div>
+            <div class="card history">
+                <h3 class="card-header text-uppercase">Search History</h3>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 float-right">
+            <div>
+                <h2 class="subtitle text-uppercase bg-light">Current Weather</h2>
+                <div class="city"></div>
+            </div>
+            <div>
+                <h2 class="subtitle text-uppercase bg-light">5-Day forecast</h2>
+                <div class="five-day"></div>
+            </div>
         </div>
     </main>
-    <aside id="mainWeather">
-        <h2>Weather</h2>
-    </aside>
-    <aside id="fivedayforecast">
-        <h2>5 Day Forecast</h2>
-    </aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Assets/js/script.js"></script>
 </body>
-
 </html>
