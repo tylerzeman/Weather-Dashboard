@@ -73,7 +73,7 @@ function getResult(){
           geoLon = data[0].lon;
           geoLat = data[0].lat;
           
-          var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + geoLat + "&lon="+ geoLon + "&exclude=minutely,hourly,alerts&units=imperial&appid=7d1b285353ccacd5326159e04cfab063";
+          var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + geoLat + "&lon="+ geoLon + "&exclude=minutely,hourly,alerts&units=imperial&appid=06da9f16ad96c5b068a1141025edcff1";
             
           fetch(weatherUrl)
 
