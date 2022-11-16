@@ -1,16 +1,16 @@
 # Weather-Dashboard
 
-Table of Contents
+##Table of Contents
 
-[User Story](#User-Story)
+--[User Story](#User-Story)
 
-[Description](#Description)
+--[Description](#Description)
 
-[Deployed Site](#Deployed-Site)
+--[Deployed Site](#Deployed-Site)
 
-[Features](#Features)
+--[Features](#Features)
 
-[Screenshots](#Screenshots)
+--[Screenshots](#Screenshots)
 
 ## User-Story
 
