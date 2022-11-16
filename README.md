@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-##Table of Contents
+## Table of Contents
 
 --[User Story](#User-Story)
 
