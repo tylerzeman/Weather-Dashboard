@@ -19,7 +19,7 @@ As a traveler I want to see the weather outlook wherever I wish to go. I want to
 ## Description
 
 The app features a seach bar that allows the user to search for many different cities and display the cities weather, wind speed, humidity and UV Index. I used the
-OpenWeather One Call API: (https://openweathermap.org/api/one-call-api) to retrive this data.
+OpenWeather One Call API: (https://openweathermap.org/api/one-call-api) to retrieve this data.
 
 ## Deployed-Site
 
